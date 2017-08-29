@@ -8,18 +8,27 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "db:create": "createdb vinyl",
-    "db:drop": "dropdb vinyl",
+    "db:init": "dropdb vinyl && created vinyl && npm run db:migrate",
+    "db:migrate:create": "pg-migrate create",
+    "db:migrate": "pg-migrate up 1",
     "db:schema": "psql -d vinyl < src/db/schema.sql",
-    "db:seed": "psql -d vinyl < src/db/albums.sql",
+    "load_albums": "psql -d vinyl < src/db/albums.sql",
     "test": "./node_modules/.bin/eslint src"
   },
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
-    "pg": "^6.2.4"
+    "express-session": "^1.15.5",
+    "node-pg-migrate": "^2.7.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^6.2.4",
+    "pg-promise": "^6.5.1"
   },
   "devDependencies": {
     "eslint": "^4.4.1",
