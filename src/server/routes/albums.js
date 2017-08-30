@@ -12,16 +12,24 @@ router.get('/', (request, response) => {
   })
 })
 
-router.get('/albums/:albumID', (request, response) => {
-  const albumID = request.params.albumID
+router.get('/albums/:albumId', (request, response) => {
+  const albumId = request.params.albumId
+  const user = request.user
 
-  dbAlbums.getAlbumsByID(albumID).then((albums) => {
-    const album = albums[0]
-    response.render('album', {album})
+  dbAlbums.getAlbumsByID(albumId).then((albums) => {
+    dbReviews.getReviewsByAlbumId(albumId).then((reviews) => {
+			console.log(reviews);
+      const album = albums[0]
+      response.render('album', {album, user, reviews})
+    })
   })
     .catch((error) => {
       response.status(500).render('error', {error})
     })
+})
+
+router.get('/albums/:albumId/reviews/new', (request, response) => {
+  response.render('new_review')
 })
 
 module.exports = router

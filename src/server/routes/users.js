@@ -7,6 +7,7 @@ router.get('/profile/:userId', (request, response) => {
 
   dbUsers.getUserById(userId).then((user) => {
     dbReviews.getReviewsByUserId(userId).then((reviews) => {
+			console.log(reviews);
       response.render('profile', {user: user[0], reviews})
     })
   })
