@@ -16,7 +16,10 @@
 -- JOIN users ON user_id=users.id
 -- WHERE album_id=3 ORDER BY date_created DESC;
 
-SELECT content, date_created, albums.title, users.name, users.id AS userid, albums.id AS albumid FROM reviews
-JOIN albums ON album_id=albums.id
-JOIN users ON user_id=users.id
-ORDER BY date_created DESC LIMIT 3;
+-- SELECT content, date_created, albums.title, users.name, users.id AS userid, albums.id AS albumid FROM reviews
+-- JOIN albums ON album_id=albums.id
+-- JOIN users ON user_id=users.id
+-- ORDER BY date_created DESC LIMIT 3;
+
+INSERT INTO reviews (user_id, album_id, content)
+VALUES (2,2,'That was pretty awesome');

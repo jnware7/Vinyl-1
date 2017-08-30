@@ -223,19 +223,19 @@ Routing:
 
 Users can:
 
-- [ ] __20:__ Enter multi-line text in the text field.
-- [ ] __20:__ Click the Submit button to submit the review.
-- [ ] __20:__ Be redirected to the album page (e.g. `/albums/<ALBUM ID>`) after submitting the review.
+- [x] __20:__ Enter multi-line text in the text field.
+- [x] __20:__ Click the Submit button to submit the review.
+- [x] __20:__ Be redirected to the album page (e.g. `/albums/<ALBUM ID>`) after submitting the review.
 
 Users CANNOT:
 
-- [ ] __20:__ Submit a review when not logged in.
-- [ ] __20:__ Submit an empty review.
+- [x] __20:__ Submit a review when not logged in.
+- [x] __20:__ Submit an empty review.
 
 Layout:
 
-- [ ] __10:__ The site-wide header is visible on the new review page.
-- [ ] __20:__ The layout of the new review page matches the wireframes.
+- [x] __10:__ The site-wide header is visible on the new review page.
+- [x] __20:__ The layout of the new review page matches the wireframes.
 
 ---
 

@@ -22,7 +22,9 @@ html, body {
 }
 
 .date-created,
-.trash {
+.trash,
+.add-review,
+.submit-review {
 	float: right;
 }
 
@@ -33,8 +35,4 @@ html, body {
 
 .trash {
 	cursor: pointer;
-}
-
-.add-review {
-	float: right;
 }

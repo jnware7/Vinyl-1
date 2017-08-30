@@ -18,7 +18,6 @@ router.get('/albums/:albumId', (request, response) => {
 
   dbAlbums.getAlbumsByID(albumId).then((albums) => {
     dbReviews.getReviewsByAlbumId(albumId).then((reviews) => {
-			console.log(reviews);
       const album = albums[0]
       response.render('album', {album, user, reviews})
     })
@@ -26,10 +25,6 @@ router.get('/albums/:albumId', (request, response) => {
     .catch((error) => {
       response.status(500).render('error', {error})
     })
-})
-
-router.get('/albums/:albumId/reviews/new', (request, response) => {
-  response.render('new_review')
 })
 
 module.exports = router
