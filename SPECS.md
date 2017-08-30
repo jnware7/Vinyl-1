@@ -2,7 +2,7 @@
 
 This is a coding challenge for entrance to Phase 4.
 
-To get started, create a new repository called `phase-4-challenge` and import the files from [the scaffold][scaffold]. Do all of your work in this repo.
+To get started, create a new repository called `vinyl` and import the files from [the scaffold][scaffold]. Do all of your work in this repo.
 
 During your interview, you'll review your solution with the interviewer. You'll then build a new feature to enhance the application. Read the [Live Coding Exercise](#live-coding-exercise) section at the end of this document for more details.
 
