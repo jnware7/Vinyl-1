@@ -1,10 +1,5 @@
-console.log('hello from the browser JavaScript')
-$(document).ready(() => {
-  initializeDeleteButtons()
-})
-
-const initializeDeleteButtons = () => {
-  $('.trash').click(() => {
-    alert('Are you sure you want to delete this review?')
-  })
+const confirmDelete = (reviewId) => {
+  if (confirm('Are you sure you want to delete this review?')) {
+    window.location = `/delete/${reviewId}`
+  }
 }

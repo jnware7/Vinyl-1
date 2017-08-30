@@ -16,9 +16,13 @@ JOIN albums ON album_id=albums.id
 JOIN users ON user_id=users.id
 WHERE album_id=$1 ORDER BY date_created DESC`, [albumId])
 
+const createNewAlbumReview = (userId, albumId, content) => _query(`INSERT INTO reviews (user_id, album_id, content)
+VALUES ($1, $2, $3)`, [userId, albumId, content])
+
 module.exports = {
   getRecentReviews,
   getReviewsByUserId,
   deleteReviewByReviewId,
   getReviewsByAlbumId,
+  createNewAlbumReview,
 }
