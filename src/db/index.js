@@ -11,7 +11,7 @@ const _query = (sql, variables) => {
     .catch((error) => {
       console.log('QUERY -> !!ERROR!!')
       console.log(error)
-			return error
+      return error
     })
 }
 

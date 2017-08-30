@@ -18,8 +18,7 @@ router.get('/albums/:albumId', (request, response) => {
 
   dbAlbums.getAlbumsByID(albumId).then((albums) => {
     dbReviews.getReviewsByAlbumId(albumId).then((reviews) => {
-      const album = albums[0]
-      response.render('album', {album, user, reviews})
+      response.render('album', {album: albums[0], user, reviews})
     })
   })
     .catch((error) => {
