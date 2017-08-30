@@ -10,12 +10,11 @@ passport.use('local', new LocalStrategy({
 },
 (request, email, password, done) => {
   return DbUsers.checkUserByEmail(email).then((user) => {
-    user = user[0]
-    if (!user) {
+    if (!user[0]) {
       return done(null, false)
     }
-    if (password === user.password) {
-      return done(null, user)
+    if (password === user[0].password) {
+      return done(null, user[0])
     }
     return done(null, false)
   })

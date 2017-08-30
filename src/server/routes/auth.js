@@ -29,7 +29,9 @@ router.route('/sign-up')
     const {name, email, password} = request.body
     db.createUser(name, email, password).then((newUser) => {
       if (newUser.name === 'error') {
-        response.render('signup')
+        response.render('signup', {
+          message: `User with email ${email} already exists`,
+        })
       } else {
         passport.authenticate('local', (error, user) => {
           if (error) { return next(error) }
