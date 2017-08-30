@@ -27,6 +27,7 @@ app.use(passport.session())
 
 app.use((request, response, next) => {
   response.locals.isLoggedIn = null
+  response.locals.id = null
   response.locals.message = ''
   response.locals.moment = require('moment')
   next()

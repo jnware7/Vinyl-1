@@ -34,3 +34,7 @@ html, body {
 .trash {
 	cursor: pointer;
 }
+
+.add-review {
+	float: right;
+}

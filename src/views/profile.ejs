@@ -13,8 +13,11 @@
 			<div class="reviews">
 				<% reviews.forEach(function(review) { %>
 					<div>
-						<h5><a href="#"><%= review.title %></a><span class="date-created"> <%= moment(review.date_created).format('MMMM Do YYYY') %></span></h5>
-						<p><%= review.content %> <a href="/delete/<%= review.id %>"><span class="glyphicon glyphicon-trash trash"></span></a></p>
+						<h5><a href="/albums/<%= review.albumid %>"><%= review.title %></a><span class="date-created"> <%= moment(review.date_created).format('MMMM Do YYYY') %></span></h5>
+						<p><%= review.content %> <a href="/delete/<%= review.id %>">
+						<% if (user.id === id) { %>
+							<span class="glyphicon glyphicon-trash trash"></span></a></p>
+						<% } %>
 					</div>
 					<% }) %>
 			</div>
