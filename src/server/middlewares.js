@@ -1,6 +1,6 @@
 const isLoggedIn = (request, response, next) => {
   if (!request.user) {
-    response.redirect('/')
+    response.redirect('/sign-in')
   } else {
     response.locals.isLoggedIn = true
     next()

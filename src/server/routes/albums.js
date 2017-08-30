@@ -1,17 +1,21 @@
-const db = require('../../db/albums')
+const dbAlbums = require('../../db/albums')
+const dbReviews = require('../../db/reviews')
 const router = require('express').Router()
 
-router.get('/', (requst, response) => {
+router.get('/', (request, response) => {
+  const user = request.user
 
-  db.getAlbums().then((albums) => {
-    response.render('index', {albums})
+  dbAlbums.getAlbums().then((albums) => {
+    dbReviews.getRecentReviews().then((reviews) => {
+      response.render('index', {albums, user, reviews})
+    })
   })
 })
 
 router.get('/albums/:albumID', (request, response) => {
   const albumID = request.params.albumID
 
-  db.getAlbumsByID(albumID).then((albums) => {
+  dbAlbums.getAlbumsByID(albumID).then((albums) => {
     const album = albums[0]
     response.render('album', {album})
   })
