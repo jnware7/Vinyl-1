@@ -84,13 +84,13 @@ Routing:
 Users can:
 
 - [x] __20:__ View all albums on the home page (under the "Records" heading).
-- [ ] __20:__ View only the _**3 most recent**_ reviews on the home page sorted by newest first.
+- [x] __20:__ View only the _**3 most recent**_ reviews on the home page sorted by newest first.
 - [x] __20:__ Click on an album title to go to the album page (e.g. `/albums/<ALBUM ID>`).
 
 Layout:
 
 - [x] __10:__ The site-wide header is visible on the home page.
-- [ ] __20:__ The layout of the home page matches the wireframes.
+- [x] __20:__ The layout of the home page matches the wireframes.
 
 ## Sign Up
 
@@ -154,7 +154,7 @@ Users can:
 
 Users CANNOT:
 
-- [ ] __20:__ Perform any actions that require a user to be signed in after signing out.
+- [x] __20:__ Perform any actions that require a user to be signed in after signing out.
 
 ## User Profile
 

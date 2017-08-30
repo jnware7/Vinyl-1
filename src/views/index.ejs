@@ -1,15 +1,38 @@
 <%- include partials/header %>
-<h1>Vinyl</h1>
 
-<h2>Records</h2>
+<div class="jumbotron"></div>
 
-<div class="album-list">
-  <% albums.forEach(function(album) { %>
-    <div>
-      <h5><a href="/albums/<%= album.id %>"><%= album.title %></a></h5>
-      <span><%= album.artist %></span>
-    </div>
-  <% }) %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>Records</h2>
+
+			<div class="album-list">
+				<% albums.forEach(function(album) { %>
+					<div>
+						<h5><a href="/albums/<%= album.id %>"><%= album.title %></a></h5>
+						<span><%= album.artist %></span>
+					</div>
+					<% }) %>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<h2>Recent Reviews</h2>
+
+			<div class="recent-reviews">
+				<% reviews.forEach(function(review) { %>
+					<div>
+						<h5><a href="#"><%= review.title %></a><span class="date-created"> <%= moment(review.date_created).format('MMMM Do YYYY') %></span></h5>
+						<p><%= review.content %></p>
+						<p class="text-right"><span>by <a href="#"><%= review.name %></a><span></p>
+					</div>
+					<% }) %>
+			</div>
+
+		</div>
+	</div>
+
 </div>
+
 
 <%- include partials/footer %>
