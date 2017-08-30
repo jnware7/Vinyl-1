@@ -5,34 +5,34 @@ html, body {
 }
 
 .wrap-login {
-	padding: 20px;
-	padding-bottom: 30px;
-	margin-top: 30px;
-	background-color: #fff;
-	border: solid 1px #d0d0d0;
-	-webkit-box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
-	-moz-box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
-	box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  background-color: #fff;
+  border: solid 1px #d0d0d0;
+  -webkit-box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
+  -moz-box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
+  box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
 }
 
 .jumbotron {
-	background-image: url('https://i.pinimg.com/originals/1b/2b/64/1b2b64ff3f2ab7e049337857f271e091.jpg');
-	min-height: 400px;
-	background-repeat: no-repeat;
+  background-image: url('https://i.pinimg.com/originals/1b/2b/64/1b2b64ff3f2ab7e049337857f271e091.jpg');
+  min-height: 400px;
+  background-repeat: no-repeat;
 }
 
 .date-created,
 .trash,
 .add-review,
 .submit-review {
-	float: right;
+  float: right;
 }
 
 .email,
 .date-joined {
-	margin-left: 15px;
+  margin-left: 15px;
 }
 
 .trash {
-	cursor: pointer;
+  cursor: pointer;
 }
