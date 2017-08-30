@@ -21,6 +21,16 @@ html, body {
 	background-repeat: no-repeat;
 }
 
-.date-created {
+.date-created,
+.trash {
 	float: right;
+}
+
+.email,
+.date-joined {
+	margin-left: 15px;
+}
+
+.trash {
+	cursor: pointer;
 }

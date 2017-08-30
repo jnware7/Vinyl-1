@@ -1,3 +1,24 @@
 <%- include partials/header %>
-<h1>Hello <%= user.name %></h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<img src="https://<%= user.profile_picture %>" alt="Profile Picture" class="img-thumbnail">
+		</div>
+		<div class="col-md-8">
+			<h1><%= user.name %></h1>
+			<p>Email <span class="email"><%= user.email %></span></p>
+			<p>Date Joined <span class="date-joined"><%= moment(user.date_joined).format('MMMM Do YYYY') %></span></p>
+			<hr>
+			<h1>Reviews</h1>
+			<div class="reviews">
+				<% reviews.forEach(function(review) { %>
+					<div>
+						<h5><a href="#"><%= review.title %></a><span class="date-created"> <%= moment(review.date_created).format('MMMM Do YYYY') %></span></h5>
+						<p><%= review.content %> <a href="/delete/<%= review.id %>"><span class="glyphicon glyphicon-trash trash"></span></a></p>
+					</div>
+					<% }) %>
+			</div>
+		</div>
+	</div>
+</div>
 <%- include partials/footer %>
